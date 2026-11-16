@@ -1,0 +1,835 @@
+[[packages]]
+name = "tar"
+version = "1.35"
+url = "https://ftp.gnu.org/gnu/tar/tar-1.35.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "gzip"
+version = "1.13"
+url = "https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "bzip2"
+version = "1.0.8"
+url = "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz"
+strip_components = 1
+build_system = "make"
+make_args = ["-f", "Makefile-libbz2_so"]
+install_args = ["install"]
+
+[[packages]]
+name = "grep"
+version = "3.11"
+url = "https://ftp.gnu.org/gnu/grep/grep-3.11.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "sed"
+version = "4.9"
+url = "https://ftp.gnu.org/gnu/sed/sed-4.9.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "gawk"
+version = "5.3.0"
+url = "https://ftp.gnu.org/gnu/gawk/gawk-5.3.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "findutils"
+version = "4.9.0"
+url = "https://ftp.gnu.org/gnu/findutils/findutils-4.9.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "diffutils"
+version = "3.10"
+url = "https://ftp.gnu.org/gnu/diffutils/diffutils-3.10.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "patch"
+version = "2.7.6"
+url = "https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "coreutils"
+version = "9.5"
+url = "https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "make"
+version = "4.4.1"
+url = "https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "bash"
+version = "5.2.21"
+url = "https://ftp.gnu.org/gnu/bash/bash-5.2.21.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "readline"
+version = "8.2"
+url = "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "ncurses"
+version = "6.4"
+url = "https://ftp.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local", "--with-shared"]
+install_args = ["install"]
+
+[[packages]]
+name = "nano"
+version = "8.0"
+url = "https://ftp.gnu.org/gnu/nano/nano-8.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "screen"
+version = "4.9.1"
+url = "https://ftp.gnu.org/gnu/screen/screen-4.9.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "wget"
+version = "1.21.4"
+url = "https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "curl"
+version = "8.7.1"
+url = "https://curl.se/download/curl-8.7.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local", "--with-openssl"]
+install_args = ["install"]
+
+[[packages]]
+name = "git"
+version = "2.45.1"
+url = "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.45.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "autoconf"
+version = "2.72"
+url = "https://ftp.gnu.org/gnu/autoconf/autoconf-2.72.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "automake"
+version = "1.16.5"
+url = "https://ftp.gnu.org/gnu/automake/automake-1.16.5.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "libtool"
+version = "2.4.7"
+url = "https://ftp.gnu.org/gnu/libtool/libtool-2.4.7.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "m4"
+version = "1.4.19"
+url = "https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "bison"
+version = "3.8.2"
+url = "https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "flex"
+version = "2.6.4"
+url = "https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "pkg-config"
+version = "0.29.2"
+url = "https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local", "--with-internal-glib"]
+install_args = ["install"]
+
+[[packages]]
+name = "zlib"
+version = "1.3.1"
+url = "https://zlib.net/zlib-1.3.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "openssl"
+version = "3.3.0"
+url = "https://www.openssl.org/source/openssl-3.3.0.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["./config --prefix=/usr/local && make -j$(nproc)"]
+custom_install = ["make install"]
+
+[[packages]]
+name = "sqlite"
+version = "3.45.3"
+url = "https://www.sqlite.org/2024/sqlite-autoconf-3450300.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "pcre2"
+version = "10.43"
+url = "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.43/pcre2-10.43.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "libxml2"
+version = "2.12.7"
+url = "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.7.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local", "--without-python"]
+install_args = ["install"]
+
+[[packages]]
+name = "expat"
+version = "2.6.2"
+url = "https://github.com/libexpat/libexpat/releases/download/R_2_6_2/expat-2.6.2.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "libarchive"
+version = "3.7.4"
+url = "https://libarchive.org/downloads/libarchive-3.7.4.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "libuv"
+version = "1.48.0"
+url = "https://dist.libuv.org/dist/v1.48.0/libuv-v1.48.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "libevent"
+version = "2.1.12"
+url = "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "c-ares"
+version = "1.28.1"
+url = "https://c-ares.org/download/c-ares-1.28.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "libpng"
+version = "1.6.43"
+url = "https://download.sourceforge.net/libpng/libpng-1.6.43.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "freetype"
+version = "2.13.2"
+url = "https://download.savannah.gnu.org/releases/freetype/freetype-2.13.2.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "fontconfig"
+version = "2.15.0"
+url = "https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.15.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "pixman"
+version = "0.43.4"
+url = "https://www.cairographics.org/releases/pixman-0.43.4.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "cairo"
+version = "1.18.0"
+url = "https://www.cairographics.org/releases/cairo-1.18.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "jq"
+version = "1.7.1"
+url = "https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-1.7.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "tree"
+version = "2.1.1"
+url = "https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.1.1/unix-tree-2.1.1.tar.gz"
+strip_components = 1
+build_system = "make"
+install_args = ["install"]
+
+[[packages]]
+name = "htop"
+version = "3.3.0"
+url = "https://github.com/htop-dev/htop/releases/download/3.3.0/htop-3.3.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "tmux"
+version = "3.4"
+url = "https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "zsh"
+version = "5.9"
+url = "https://www.zsh.org/pub/zsh-5.9.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "fish"
+version = "3.7.1"
+url = "https://github.com/fish-shell/fish-shell/releases/download/3.7.1/fish-3.7.1.tar.gz"
+strip_components = 1
+build_system = "cmake"
+configure_args = ["-DCMAKE_INSTALL_PREFIX=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "cmake"
+version = "3.29.3"
+url = "https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["./bootstrap --prefix=/usr/local && make -j$(nproc)"]
+custom_install = ["make install"]
+
+[[packages]]
+name = "ninja"
+version = "1.12.1"
+url = "https://github.com/ninja-build/ninja/archive/refs/tags/v1.12.1.tar.gz"
+strip_components = 1
+build_system = "cmake"
+configure_args = ["-DCMAKE_INSTALL_PREFIX=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "ripgrep"
+version = "14.1.1"
+url = "https://github.com/BurntSushi/ripgrep/archive/refs/tags/14.1.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "fd-find"
+version = "10.1.0"
+url = "https://github.com/sharkdp/fd/archive/refs/tags/v10.1.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "bat"
+version = "0.24.0"
+url = "https://github.com/sharkdp/bat/archive/refs/tags/v0.24.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "eza"
+version = "0.18.21"
+url = "https://github.com/eza-community/eza/archive/refs/tags/v0.18.21.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "hyperfine"
+version = "1.18.0"
+url = "https://github.com/sharkdp/hyperfine/archive/refs/tags/v1.18.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "tokei"
+version = "12.1.2"
+url = "https://github.com/XAMPPRocky/tokei/archive/refs/tags/v12.1.2.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "procs"
+version = "0.14.5"
+url = "https://github.com/dalance/procs/archive/refs/tags/v0.14.5.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "dust"
+version = "1.1.1"
+url = "https://github.com/bootandy/dust/archive/refs/tags/v1.1.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "sd"
+version = "1.0.0"
+url = "https://github.com/chmln/sd/archive/refs/tags/v1.0.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "zoxide"
+version = "0.9.4"
+url = "https://github.com/ajeetdsouza/zoxide/archive/refs/tags/v0.9.4.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "delta"
+version = "0.17.0"
+url = "https://github.com/dandavison/delta/archive/refs/tags/0.17.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "xcp"
+version = "0.18.0"
+url = "https://github.com/tarka/xcp/archive/refs/tags/v0.18.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "bottom"
+version = "0.9.6"
+url = "https://github.com/ClementTsang/bottom/archive/refs/tags/0.9.6.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "bandwhich"
+version = "0.22.1"
+url = "https://github.com/imsnlp/bandwhich/archive/refs/tags/v0.22.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "dog"
+version = "0.1.0"
+url = "https://github.com/ogham/dog/archive/refs/tags/v0.1.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "exa"
+version = "0.10.1"
+url = "https://github.com/ogham/exa/archive/refs/tags/v0.10.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "starship"
+version = "1.18.2"
+url = "https://github.com/starship/starship/archive/refs/tags/v1.18.2.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "alacritty"
+version = "0.13.2"
+url = "https://github.com/alacritty/alacritty/archive/refs/tags/v0.13.2.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "helix"
+version = "24.03"
+url = "https://github.com/helix-editor/helix/archive/refs/tags/24.03.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "yazi"
+version = "0.2.5"
+url = "https://github.com/sxyazi/yazi/archive/refs/tags/v0.2.5.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "zellij"
+version = "0.40.1"
+url = "https://github.com/zellij-org/zellij/archive/refs/tags/v0.40.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "nushell"
+version = "0.93.0"
+url = "https://github.com/nushell/nushell/archive/refs/tags/0.93.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "just"
+version = "1.26.0"
+url = "https://github.com/casey/just/archive/refs/tags/1.26.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "mise"
+version = "2024.5.12"
+url = "https://github.com/jdx/mise/archive/refs/tags/v2024.5.12.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "watchexec"
+version = "2.1.2"
+url = "https://github.com/watchexec/watchexec/archive/refs/tags/v2.1.2.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "tealdeer"
+version = "1.6.1"
+url = "https://github.com/dbrgn/tealdeer/archive/refs/tags/v1.6.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "grex"
+version = "1.4.5"
+url = "https://github.com/pemistahl/grex/archive/refs/tags/v1.4.5.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "xh"
+version = "0.22.0"
+url = "https://github.com/ducaale/xh/archive/refs/tags/v0.22.0.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "gping"
+version = "1.17.1"
+url = "https://github.com/orf/gping/archive/refs/tags/gping-v1.17.1.tar.gz"
+strip_components = 1
+build_system = "cargo"
+
+[[packages]]
+name = "duf"
+version = "0.8.1"
+url = "https://github.com/muesli/duf/archive/refs/tags/v0.8.1.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o duf ."]
+custom_install = ["install -Dm755 duf /usr/local/bin/duf"]
+
+[[packages]]
+name = "lazygit"
+version = "0.42.0"
+url = "https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.42.0.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o lazygit ."]
+custom_install = ["install -Dm755 lazygit /usr/local/bin/lazygit"]
+
+[[packages]]
+name = "fzf"
+version = "0.52.1"
+url = "https://github.com/junegunn/fzf/archive/refs/tags/v0.52.1.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o fzf ."]
+custom_install = ["install -Dm755 fzf /usr/local/bin/fzf"]
+
+[[packages]]
+name = "gh"
+version = "2.49.0"
+url = "https://github.com/cli/cli/archive/refs/tags/v2.49.0.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o gh ./cmd/gh"]
+custom_install = ["install -Dm755 gh /usr/local/bin/gh"]
+
+[[packages]]
+name = "yq"
+version = "4.44.1"
+url = "https://github.com/mikefarah/yq/archive/refs/tags/v4.44.1.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o yq ."]
+custom_install = ["install -Dm755 yq /usr/local/bin/yq"]
+
+[[packages]]
+name = "ctop"
+version = "0.7.7"
+url = "https://github.com/bcicen/ctop/archive/refs/tags/v0.7.7.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o ctop ."]
+custom_install = ["install -Dm755 ctop /usr/local/bin/ctop"]
+
+[[packages]]
+name = "glow"
+version = "1.5.1"
+url = "https://github.com/charmbracelet/glow/archive/refs/tags/v1.5.1.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o glow ."]
+custom_install = ["install -Dm755 glow /usr/local/bin/glow"]
+
+[[packages]]
+name = "gum"
+version = "0.14.0"
+url = "https://github.com/charmbracelet/gum/archive/refs/tags/v0.14.0.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o gum ."]
+custom_install = ["install -Dm755 gum /usr/local/bin/gum"]
+
+[[packages]]
+name = "vhs"
+version = "0.7.1"
+url = "https://github.com/charmbracelet/vhs/archive/refs/tags/v0.7.1.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o vhs ."]
+custom_install = ["install -Dm755 vhs /usr/local/bin/vhs"]
+
+[[packages]]
+name = "dive"
+version = "0.12.0"
+url = "https://github.com/wagoodman/dive/archive/refs/tags/v0.12.0.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = ["go build -o dive ."]
+custom_install = ["install -Dm755 dive /usr/local/bin/dive"]
+
+[[packages]]
+name = "btop"
+version = "1.3.2"
+url = "https://github.com/aristocratos/btop/archive/refs/tags/v1.3.2.tar.gz"
+strip_components = 1
+build_system = "make"
+install_args = ["install"]
+
+[[packages]]
+name = "neovim"
+version = "0.10.0"
+url = "https://github.com/neovim/neovim/archive/refs/tags/v0.10.0.tar.gz"
+strip_components = 1
+build_system = "cmake"
+configure_args = ["-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_INSTALL_PREFIX=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "entr"
+version = "5.6"
+url = "https://eradman.com/entrproject/code/entr-5.6.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "iperf3"
+version = "3.17"
+url = "https://downloads.es.net/pub/iperf/iperf-3.17.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "nmap"
+version = "7.95"
+url = "https://nmap.org/dist/nmap-7.95.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "rsync"
+version = "3.3.0"
+url = "https://download.samba.org/pub/rsync/src/rsync-3.3.0.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "openssh"
+version = "9.7p1"
+url = "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "sudo"
+version = "1.9.15p5"
+url = "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "less"
+version = "643"
+url = "https://www.greenwoodsoftware.com/less/less-643.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "util-linux"
+version = "2.40.1"
+url = "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+install_args = ["install"]
+
+[[packages]]
+name = "gimp"
+version = "3.2.8"
+url = "https://gitlab.gnome.org/GNOME/gimp/-/archive/GIMP_3_2_8/gimp-GIMP_3_2_8.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "meson setup build --prefix=/usr/local",
+  "ninja -C build"
+]
+custom_install = [
+  "ninja -C build install"
+]
