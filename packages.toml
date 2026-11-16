@@ -833,3 +833,50 @@ custom_build = [
 custom_install = [
   "ninja -C build install"
 ]
+
+[[packages]]
+name = "neovim"
+version = "0.12.5"
+url = "https://github.com/neovim/neovim/archive/refs/tags/v0.12.5.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local",
+  "cmake --build build --parallel"
+]
+custom_install = [
+  "cmake --install build --prefix /usr/local"
+]
+
+[[packages]]
+name = "vim"
+version = "latest"
+url = "https://github.com/vim/vim/archive/refs/heads/master.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local"]
+make_args = []
+install_args = ["install"]
+
+[[packages]]
+name = "firefox"
+version = "latest"
+url = "https://hg.mozilla.org/mozilla-central/archive/tip.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "./mach build"
+]
+custom_install = [
+  "./mach install"
+]
+
+[[packages]]
+name = "libreoffice"
+version = "26.8.3.1"
+url = "https://download.documentfoundation.org/libreoffice/src/26.8.3/libreoffice-26.8.3.1.tar.gz"
+strip_components = 1
+build_system = "autotools"
+configure_args = ["--prefix=/usr/local", "--without-junit"]
+make_args = []
+install_args = ["install"]
