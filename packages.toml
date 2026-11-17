@@ -880,3 +880,70 @@ build_system = "autotools"
 configure_args = ["--prefix=/usr/local", "--without-junit"]
 make_args = []
 install_args = ["install"]
+]
+
+[[packages]]
+name = "xfce4"
+version = "4.20.2"
+url = "https://gitlab.xfce.org/xfce/xfce4-session/-/archive/xfce4-session-4.20.2/xfce4-session-xfce4-session-4.20.2.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "meson setup build --prefix=/usr/local",
+  "meson compile -C build"
+]
+custom_install = [
+  "meson install -C build"
+]
+
+[[packages]]
+name = "kde"
+version = "v6.1.0"
+url = "https://invent.kde.org/plasma/plasma-desktop/-/archive/v6.1.0/plasma-desktop-v6.1.0.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local",
+  "cmake --build build --parallel"
+]
+custom_install = [
+  "cmake --install build --prefix /usr/local"
+]
+
+[[packages]]
+name = "gnome"
+version = "51.1"
+url = "https://gitlab.gnome.org/GNOME/gnome-shell/-/archive/51.1/gnome-shell-51.1.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "meson setup build --prefix=/usr/local",
+  "meson compile -C build"
+]
+custom_install = [
+  "meson install -C build"
+]
+
+[[packages]]
+name = "sway"
+version = "1.12"
+url = "https://github.com/swaywm/sway/archive/refs/tags/1.12.tar.gz"
+strip_components = 1
+build_system = "custom"
+custom_build = [
+  "meson setup build --prefix=/usr/local",
+  "meson compile -C build"
+]
+custom_install = [
+  "meson install -C build"
+]
+
+[[packages]]
+name = "dwm"
+version = "6.5"
+url = "https://git.suckless.org/dwm/snapshot/dwm-6.5.tar.gz"
+strip_components = 1
+build_system = "make"
+configure_args = []
+make_args = []
+install_args = ["install", "PREFIX=/usr/local"]
