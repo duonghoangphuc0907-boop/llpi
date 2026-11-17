@@ -4,12 +4,13 @@ use flate2::read::GzDecoder;
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
 use std::fs::{self, File};
+use std::io::{self, Write};
 use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
 use tar::Archive;
 
 #[derive(Parser)]
-#[command(name = "pkgforge", about = "Source-based Linux package manager in Rust")]
+#[command(name = "llpi", about = "Source-based Linux package manager in Rust")]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -140,11 +141,26 @@ fn main() -> Result<()> {
     Ok(())
 }
 
+fn confirm_action(action: &str, items: &[String]) -> Result<bool> {
+    println!("==> Packages to {action}:");
+    for item in items {
+        println!("  - {item}");
+    }
+    print!("Is this ok? [yes/no]: ");
+    io::stdout().flush()?;
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input)?;
+    match input.trim().to_lowercase().as_str() {
+        "y" | "yes" => Ok(true),
+        _ => Ok(false),
+    }
+}
+
 fn list_catalog(catalog_path: &str) -> Result<()> {
     let content = fs::read_to_string(catalog_path)
         .with_context(|| format!("Failed to read catalog file: {catalog_path}"))?;
-    let cat: CatalogFile =
-        toml::from_str(&content).context("Failed to parse catalog TOML")?;
+    let cat: CatalogFile = toml::from_str(&content).context("Failed to parse catalog TOML")?;
 
     for pkg in &cat.packages {
         println!("{:<20} {:<15} {}", pkg.name, pkg.version, pkg.build_system);
@@ -203,7 +219,6 @@ fn load_manifest(
         return Ok(manifest);
     }
 
-    // Otherwise look up package name inside the catalog TOML
     if Path::new(catalog_path).exists() {
         let content = fs::read_to_string(catalog_path)
             .with_context(|| format!("Failed to read catalog file: {catalog_path}"))?;
@@ -214,12 +229,22 @@ fn load_manifest(
         }
     }
 
-    bail!("Package '{}' not found as a manifest file or in catalog '{}'", source, catalog_path);
+    bail!(
+        "Package '{}' not found as a manifest file or in catalog '{}'",
+        source,
+        catalog_path
+    );
 }
 
 fn run_install(manifest: &PackageManifest, prefix: &str, keep_work: bool) -> Result<()> {
+    let pkg_label = format!("{} ({})", manifest.name, manifest.version);
+    if !confirm_action("install", &[pkg_label])? {
+        println!("Aborted.");
+        return Ok(());
+    }
+
     let work_dir = std::env::temp_dir().join(format!(
-        "pkgforge-{}-{}",
+        "llpi-{}-{}",
         manifest.name,
         std::process::id()
     ));
@@ -419,7 +444,7 @@ fn db_path() -> Result<PathBuf> {
         let home = std::env::var_os("HOME").context("HOME environment variable not set")?;
         PathBuf::from(home).join(".local").join("share")
     };
-    Ok(base.join("pkgforge").join("installed.json"))
+    Ok(base.join("llpi").join("installed.json"))
 }
 
 fn load_db() -> Result<InstallDb> {
@@ -499,6 +524,21 @@ fn run_remove(name: &str, prefix: &str, explicit_files: &[String]) -> Result<()>
             fallback_bin.display()
         );
         targets.push(fallback_bin);
+    }
+
+    targets.sort();
+    targets.dedup();
+
+    let mut summary = vec![name.to_string()];
+    for t in &targets {
+        if t.exists() || t.symlink_metadata().is_ok() {
+            summary.push(format!("  -> {}", t.display()));
+        }
+    }
+
+    if !confirm_action("remove", &summary)? {
+        println!("Aborted.");
+        return Ok(());
     }
 
     let mut removed_any = false;
